@@ -112,6 +112,26 @@
 	 } else if (quantity >= 10 && quantity <= 12) {
 		return ['4x Plastic Cup', '4x Milk Canister', '32x Bag Of Sugar', '40x Oranges'];
 	}
+	} else if (itemName.includes('Homemade Cat Cookies')) {
+	 if (quantity >= 1 && quantity <= 3) {
+		return ['1x Dough', '2x Bag Of Sugar', '1x Icing'];
+	 } else if (quantity >= 4 && quantity <= 6) {
+		return ['2x Dough', '4x Bag Of Sugar', '2x Icing'];
+	 } else if (quantity >= 7 && quantity <= 9) {
+		return ['3x Dough', '6x Bag Of Sugar', '3x Icing'];
+	 } else if (quantity >= 10 && quantity <= 12) {
+		return ['4x Dough', '8x Bag Of Sugar', '4x Icing'];
+	 }
+	} else if (itemName.includes('Cat Cupcake')) {
+	 if (quantity >= 1 && quantity <= 3) {
+		return ['2x Dough', '2x Bag Of Sugar', '2x Icing'];
+	 } else if (quantity >= 4 && quantity <= 6) {
+		return ['4x Dough', '4x Bag Of Sugar', '4x Icing'];
+	 } else if (quantity >= 7 && quantity <= 9) {
+		return ['6x Dough', '6x Bag Of Sugar', '6x Icing'];
+	 } else if (quantity >= 10 && quantity <= 12) {
+		return ['8x Dough', '8x Bag Of Sugar', '8x Icing'];
+	 }
 	}
 
     // Default ingredients for other items
