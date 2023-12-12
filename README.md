@@ -102,6 +102,16 @@
 	 } else if (quantity >= 10 && quantity <= 12) {
 		return ['8x Lettuce', '12x Cucumber', '20x Peas', '12x Tomatoes'];
      }
+	} else if (itemName.includes('Fruit Explosion')) {
+	 if (quantity >= 1 && quantity <= 3) {
+		return ['1x Plastic Cup', '1x Milk Canister', '8x Bag Of Sugar', '10x Oranges'];
+	 } else if (quantity >= 4 && quantity <= 6) {
+		return ['2x Plastic Cup', '2x Milk Canister', '16x Bag Of Sugar', '20x Oranges'];
+	 } else if (quantity >= 7 && quantity <= 9) {
+		return ['3x Plastic Cup', '3x Milk Canister', '24x Bag Of Sugar', '30x Oranges'];
+	 } else if (quantity >= 10 && quantity <= 12) {
+		return ['4x Plastic Cup', '4x Milk Canister', '32x Bag Of Sugar', '40x Oranges'];
+	}
 	}
 
     // Default ingredients for other items
