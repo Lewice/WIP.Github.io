@@ -92,15 +92,17 @@
       } else if (quantity >= 10 && quantity <= 12) {
         return ['12x Dough', '24x Bag Of Sugar'];
       }
-    } else if (itemName.includes('Cat Donut')) {
-      // Add conditions and ingredient variations for Cat Donut
-      // Example:
-      // if (quantity >= 1 && quantity <= 5) {
-      //   return ['Ingredient 1', 'Ingredient 2', 'Ingredient 3'];
-      // } else if (quantity >= 6 and quantity <= 10) {
-      //   return ['Ingredient 4', 'Ingredient 5', 'Ingredient 6'];
-      // }
-    }
+    } else if (itemName.includes('Salad')) {
+	 if (quantity >= 1 && quantity <= 3) {
+		return ['2x Lettuce', '3x Cucumber', '5x Peas', '3x Tomatoes'];
+	 } else if (quantity >= 4 && quantity <= 6) {
+		return ['4x Lettuce', '6x Cucumber', '10x Peas', '6x Tomatoes'];
+	 } else if (quantity >= 7 && quantity <= 9) {
+		return ['6x Lettuce', '9x Cucumber', '15x Peas', '9x Tomatoes'];
+	 } else if (quantity >= 10 && quantity <= 12) {
+		return ['8x Lettuce', '12x Cucumber', '20x Peas', '12x Tomatoes'];
+     }
+	}
 
     // Default ingredients for other items
     return ['Default Ingredient 1', 'Default Ingredient 2', 'Default Ingredient 3'];
