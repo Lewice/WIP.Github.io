@@ -132,6 +132,86 @@
 	 } else if (quantity >= 10 && quantity <= 12) {
 		return ['8x Dough', '8x Bag Of Sugar', '8x Icing'];
 	 }
+	} else if (itemName.includes('Frozen Yoghurt')) {
+	 if (quantity >= 1 && quantity <= 3) {
+		return ['1x Plastic Cup', '1x Milk Canister', '1x Bag Of Sugar'];
+	 } else if (quantity >= 4 && quantity <= 6) {
+		return ['2x Plastic Cup', '2x Milk Canister', '2x Bag Of Sugar'];
+	 } else if (quantity >= 7 && quantity <= 9) {
+		return ['3x Plastic Cup', '3x Milk Canister', '3x Bag Of Sugar'];
+	 } else if (quantity >= 10 && quantity <= 12) {
+		return ['4x Plastic Cup', '4x Milk Canister', '4x Bag Of Sugar'];
+	}
+	} else if (itemName.includes('Fresh Lemonade')) {
+	 if (quantity >= 1 && quantity <= 3) {
+		return ['5x Plastic Cup', '15x Orange'];
+	 } else if (quantity >= 4 && quantity <= 6) {
+		return ['10x Plastic Cup', '30x Orange'];
+	 } else if (quantity >= 7 && quantity <= 9) {
+		return ['15x Plastic Cup', '45x Orange'];
+	 } else if (quantity >= 10 && quantity <= 12) {
+		return ['20x Plastic Cup', '60x Orange'];
+	}
+	} else if (itemName.includes('Iced Coffee')) {
+	 if (quantity >= 1 && quantity <= 3) {
+		return ['1x Plastic Cup', '1x Coffee Beans', '1x Milk Canister'];
+	 } else if (quantity >= 4 && quantity <= 6) {
+		return ['2x Plastic Cup', '2x Coffee Beans', '2x Milk Canister'];
+	 } else if (quantity >= 7 && quantity <= 9) {
+		return ['3x Plastic Cup', '3x Coffee Beans', '3x Milk Canister'];
+	 } else if (quantity >= 10 && quantity <= 12) {
+		return ['4x Plastic Cup', '4x Coffee Beans', '4x Milk Canister'];
+	}
+	} else if (itemName.includes('Matcha Latte')) {
+	 if (quantity >= 1 && quantity <= 3) {
+		return ['1x Plastic Cup', '2x Tea Leaf', '1x Milk Canister'];
+	 } else if (quantity >= 4 && quantity <= 6) {
+		return ['2x Plastic Cup', '4x Tea Leaf', '2x Milk Canister'];
+	 } else if (quantity >= 7 && quantity <= 9) {
+		return ['3x Plastic Cup', '6x Tea Leaf', '3x Milk Canister'];
+	 } else if (quantity >= 10 && quantity <= 12) {
+		return ['4x Plastic Cup', '8x Tea Leaf', '4x Milk Canister'];
+	}
+	} else if (itemName.includes('Pumpkin Spice Latte')) {
+	 if (quantity >= 1 && quantity <= 3) {
+		return ['1x Plastic Cup', '2x Coffee Beans', '1x Milk Canister'];
+	 } else if (quantity >= 4 && quantity <= 6) {
+		return ['2x Plastic Cup', '4x Coffee Beans', '2x Milk Canister'];
+	 } else if (quantity >= 7 && quantity <= 9) {
+		return ['3x Plastic Cup', '6x Coffee Beans', '3x Milk Canister'];
+	 } else if (quantity >= 10 && quantity <= 12) {
+		return ['4x Plastic Cup', '8x Coffee Beans', '4x Milk Canister'];
+	}
+	} else if (itemName.includes('Cat Tuccino')) {
+	 if (quantity >= 1 && quantity <= 3) {
+		return ['1x Plastic Cup', '3x Coffee Beans', '1x Milk Canister'];
+	 } else if (quantity >= 4 && quantity <= 6) {
+		return ['2x Plastic Cup', '6x Coffee Beans', '2x Milk Canister'];
+	 } else if (quantity >= 7 && quantity <= 9) {
+		return ['3x Plastic Cup', '9x Coffee Beans', '3x Milk Canister'];
+	 } else if (quantity >= 10 && quantity <= 12) {
+		return ['4x Plastic Cup', '12x Coffee Beans', '4x Milk Canister'];
+	}
+	} else if (itemName.includes('Bobba Tea')) {
+	 if (quantity >= 1 && quantity <= 3) {
+		return ['1x Plastic Cup', '2x Tea Leaf'];
+	 } else if (quantity >= 4 && quantity <= 6) {
+		return ['2x Plastic Cup', '4x Tea Leaf'];
+	 } else if (quantity >= 7 && quantity <= 9) {
+		return ['3x Plastic Cup', '6x Tea Leaf'];
+	 } else if (quantity >= 10 && quantity <= 12) {
+		return ['4x Plastic Cup', '8x Tea Leaf'];
+	}
+	} else if (itemName.includes('Green Tea')) {
+	 if (quantity >= 1 && quantity <= 3) {
+		return ['1x Plastic Cup', '4x Tea Leaf'];
+	 } else if (quantity >= 4 && quantity <= 6) {
+		return ['2x Plastic Cup', '8x Tea Leaf'];
+	 } else if (quantity >= 7 && quantity <= 9) {
+		return ['3x Plastic Cup', '12x Tea Leaf'];
+	 } else if (quantity >= 10 && quantity <= 12) {
+		return ['4x Plastic Cup', '16x Tea Leaf'];
+	}
 	}
 
     // Default ingredients for other items
