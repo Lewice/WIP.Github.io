@@ -14,11 +14,6 @@
       display: inline-block; /* Display as inline-block to make items appear beside each other */
       margin-bottom: 5px;
     }
-    
-    h3 {
-  border: 1px solid black;
-  padding: 5px;
-}
 
     body, h2, form {
       text-align: center;
@@ -38,43 +33,44 @@
   </style>
   <script>
   function calculateTotals() {
-    // Reset totals and ingredients list
-    document.getElementById('total').innerText = '';
-    document.getElementById('commission').innerText = '';
-    document.getElementById('ingredientsList').innerHTML = '';
+  // Reset totals and ingredients list
+  document.getElementById('total').innerText = '';
+  document.getElementById('commission').innerText = '';
+  document.getElementById('ingredientsList').innerHTML = '';
 
-    // Calculate total from selected items
-    let total = 0;
+  // Calculate total from selected items
+  let total = 0;
 
-    const menuItems = document.querySelectorAll('.menu-item:checked');
-    menuItems.forEach(item => {
-      const itemName = item.parentNode.textContent.trim();
-      const price = parseFloat(item.dataset.price);
-      const quantity = parseInt(item.nextElementSibling.value);
-      const ingredients = calculateIngredients(itemName, quantity);
+  const menuItems = document.querySelectorAll('.menu-item:checked');
+  menuItems.forEach(item => {
+    const itemName = item.parentNode.textContent.trim();
+    const price = parseFloat(item.dataset.price);
+    const quantity = parseInt(item.nextElementSibling.value);
+    const ingredients = calculateIngredients(itemName, quantity);
 
-      if (!isNaN(price) && !isNaN(quantity) && quantity > 0) {
-        // Exclude "Mystery Box" from discounts
-        if (item.classList.contains('exclude-discount')) {
-          total += price * quantity;
-        } else {
-          total += price * quantity * (1 - ($("#discount").val() / 100));
-        }
-
-        // Display ingredients for the selected item
-        const ingredientsList = document.getElementById('ingredientsList');
-        const listItem = document.createElement('li');
-        listItem.textContent = `${quantity}x ${itemName} - Ingredients: ${ingredients.join(', ')}`;
-        ingredientsList.appendChild(listItem);
+    if (!isNaN(price) && !isNaN(quantity) && quantity > 0) {
+      // Exclude "Mystery Box" from discounts
+      if (item.classList.contains('exclude-discount')) {
+        total += price * quantity;
+      } else {
+        total += price * quantity * (1 - ($("#discount").val() / 100));
       }
-    });
 
-    // Change commission rate from 5% to 10%
-    const commission = total * 0.10;
+      // Display ingredients for the selected item
+      const ingredientsList = document.getElementById('ingredientsList');
+      const listItem = document.createElement('li');
+      listItem.textContent = `${quantity}x ${itemName} - Ingredients: ${ingredients.join(', ')}`;
+      ingredientsList.appendChild(listItem);
+    }
+  });
 
-    document.getElementById('total').innerText = total.toFixed(2);
-    document.getElementById('commission').innerText = commission.toFixed(2);
-  }
+  // Change commission rate based on the number of employees
+  const numEmployees = parseInt($("#numEmployees").val());
+  const commission = total * (0.10 / numEmployees);
+
+  document.getElementById('total').innerText = total.toFixed(2);
+  document.getElementById('commission').innerText = commission.toFixed(2);
+}
 
   function calculateIngredients(itemName, quantity) {
     if (itemName.includes('Choccy Pancakes')) {
@@ -528,6 +524,17 @@
 
     <label for="employeeName">Employee Name:</label>
     <input type="text" id="employeeName" required>
+    
+    <div style="margin-bottom: 10px;"></div>
+    
+    <label for="numEmployees">Number of Employees:</label>
+    <select id="numEmployees" onchange="calculateTotals()">
+       <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+       <option value="4">4</option>
+       <option value="5">5</option>
+   </select>
 	
 	<div style="margin-bottom: 30px;"></div>
 	
