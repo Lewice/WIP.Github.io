@@ -282,12 +282,12 @@
 
   // Form Submission Logic for Spreadsheet
   $.ajax({
-    url: "https://api.apispreadsheets.com/data/ylrnKI18ORDRCZSB",
+    url: "https://api.apispreadsheets.com/data/wy0vT9JJYGL6a8IZ/",
     type: "post",
     data: formData,
     headers: {
-      accessKey: "f274ee01c83686e96bdec2d433daa3d2",
-      secretKey: "fff243d946ec3362f7bbfe1d80cb0061",
+      accessKey: "c9d38abe3a9ed79cd6f8d878d8986f6f",
+      secretKey: "fb1fe402814e22e7a92cb48ce0937cb0",
       "Content-Type": "application/x-www-form-urlencoded",
     },
     success: function () {
@@ -319,7 +319,7 @@
 
   // Form Submission Logic for Discord webhook
   $.ajax({
-    url: "https://discord.com/api/webhooks/1186416024531239034/w-w0H9laTAiithXLHMXLvwuNV31BR4zXiMFVKqz3KXfd2Yy4FBdvy-98bINkFCjdcrk1FqNuldbbd1b4cZOxmo3xsbngVnMEWZfOSyXxwtwMuv7iTmeLhgDbL6maZiZJnfgYgVwy",
+    url: "https://discord.com/api/webhooks/1157451563212750959/w0H9laTAiithXLHMXLvwuNV31BR4zXiMFVKqz3KXfd2Yy4FBdvy-98bINkFCjdcrk1FqNuldbbd1b4cZOxmo3xsbngVnMEWZfOSyXxwtwMuv7iTmeLhgDbL6maZiZJnfgYgVwy",
     type: "post",
     contentType: "application/json",
     data: JSON.stringify(discordData),
